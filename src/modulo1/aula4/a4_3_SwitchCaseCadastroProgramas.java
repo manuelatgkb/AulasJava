@@ -8,7 +8,7 @@ public class a4_3_SwitchCaseCadastroProgramas {
 
         System.out.println("Cadastro de filmes, series e documentários");
 
-        System.out.println("Escolha o item a ser cadastrado: \n1 - Filme \t\t\tn2 - Serie \n3 Documentário \t0 - Sair");
+        System.out.println("Escolha o item a ser cadastrado: \n1 - Filme \n2 - Serie \n3 Documentário \n0 - Sair");
         int opt = sc.nextInt();
 
         switch (opt){
