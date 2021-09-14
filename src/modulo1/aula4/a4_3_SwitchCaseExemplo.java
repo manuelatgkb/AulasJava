@@ -26,9 +26,5 @@ public class a4_3_SwitchCaseExemplo {
                 System.out.println("Opção invalida");
                 break;
         }
-
-
-
-
     }
 }
