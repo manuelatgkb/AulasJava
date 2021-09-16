@@ -32,9 +32,8 @@ public class a6_1_while {
 
                     System.out.println("Digite sua senioridade: ");
                     String senioridade = sc.nextLine();
-                    sc.nextLine();
 
-
+                    invalido = true;
                     do {
                         System.out.println("Digite sua idade: ");
                         int idade = sc.nextInt();
@@ -42,17 +41,18 @@ public class a6_1_while {
                         if (idade <= 0) {
                             System.out.println("A idade tem que ser maior que ZERO");
                             System.out.println("Digite a idade novamente");
+                        }else{
+                            invalido = false;
                         }
                     }while (invalido);
+                    System.out.println("Cadastro realizado com sucesso");
+
                     break;
 
-                    case 0:
-                        System.out.printf("Sair");
-                        sc.nextLine();
-                    break;
-
-                    default:
-                        System.out.println("Cadastro realizado com sucesso");
+                case 0:
+                    System.out.printf("Sair");
+                    sc.nextLine();
+                break;
             }
     }
 }
