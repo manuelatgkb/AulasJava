@@ -12,15 +12,25 @@ public class a6_1_while {
             int op = sc.nextInt();
             switch (op) {
                 case 1:
-                    System.out.printf("Digite seu nome: ");
-                    sc.nextLine();
-                    String nome = sc.nextLine();
                     boolean invalido = true;
-                    String cpf;
+
+                    do {
+                        System.out.println("Digite seu nome: ");
+                        String nome = sc.nextLine();
+                        if (nome.length() < 3) {
+                            System.out.println("O nome deve ter mais que 3 caracteres");
+                            System.out.println("Digite novamente o nome");
+                        } else {
+                            invalido = false;
+                        }
+                    } while (invalido);
+
+
+                    String sobrenome;
                     do {
                         System.out.println("Digite seu sobrenome: ");
-                        cpf = sc.nextLine();
-                        if (cpf.length() < 3) {
+                        sobrenome = sc.nextLine();
+                        if (sobrenome.length() < 3) {
                             System.out.println("O sobrenome deve ter mais que 3 caracteres");
                             System.out.println("Digite novamente o sobrenome");
                         } else {
