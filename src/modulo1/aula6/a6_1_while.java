@@ -59,6 +59,19 @@ public class a6_1_while {
 
                     break;
 
+                case 2:
+                    boolean invalido = true;
+                    do {
+                        System.out.println("Cadastre a linguagem: ");
+                        String nomeLinguagem = sc.nextLine();
+                        if (nomeLinguagem == Frontend, Backend, Mobile) {
+                            System.out.println("Digite novamente o nome");
+                        } else {
+                            invalido = false;
+                        }
+                    } while (invalido);
+                    break;
+
                 case 0:
                     System.out.printf("Sair");
                     sc.nextLine();
