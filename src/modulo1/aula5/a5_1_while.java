@@ -1,8 +1,8 @@
-package modulo1.aula6;
+package modulo1.aula5;
 
 import java.util.Scanner;
 
-public class a6_1_while {
+public class a5_1_while {
     public static void main(String[] args) {
            System.out.printf("Cadastro das devs Manu e Raissa\n");
             Scanner sc = new Scanner(System.in);
