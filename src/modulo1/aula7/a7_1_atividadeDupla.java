@@ -83,7 +83,7 @@ public class a7_1_atividadeDupla {
                     for (int i = 0; i < prazo; i++) {
                         double totalInvest = investimento * (juros/100);
                         investimento += totalInvest;
-                        System.out.println("O valor total é :" + totalInvest);
+                        System.out.printf("Mês %d: Valor do montante %2f \n", i+1, investimento);
                     }
                     break;
                 case 0:
