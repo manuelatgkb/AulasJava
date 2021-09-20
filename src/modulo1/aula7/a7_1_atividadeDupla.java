@@ -4,63 +4,97 @@ import java.util.Scanner;
 
 public class a7_1_atividadeDupla {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Menu de números pares, ímpares, primos e cálculo de juros");
+            Scanner sc = new Scanner(System.in);
+            System.out.println(" ========= Cadastro de numeros =========");
+            // Menu:
+            System.out.println("Opções para cadastro: ");
+            System.out.println("1- Números pares");
+            System.out.println("2- Números primos");
+            System.out.println("3- números Impares");
+            System.out.println("4- Calculo de números compostos");
+            System.out.println("0 - Sair");
+            int opcoes = sc.nextInt();
+            boolean primo = true;
+            sc.nextLine();
+            // Switch-Case - Escolher opções
+            switch (opcoes) {
+                case 1:
+                    System.out.println("Digite o número par: ");
+                    int pares = sc.nextInt();
+                    sc.nextInt();
+                    for (int nPares = 2; nPares <= pares; nPares++) {
+                        if (nPares % 2 == 0) {
+                            System.out.println(nPares + "\n ");
+                        }
+                    }
+                    break;
+                case 2:
+                    System.out.println("Digite o número primo: ");
+                    int numprimo = sc.nextInt();
+                    sc.nextInt();
+                    for (int contador = 0; contador <= numprimo; contador++) {
+                        for (int cont = 2; cont < contador; cont++) {
+                            if (contador % cont == 0) {
+                                primo = false;
+                            }
+                        }
+                        if (primo) {
+                            System.out.print(contador);
+                        }
+                    }
 
-        System.out.println("Escolha o item a ser cadastrado: \n1 - pares \n2 - ímpares \n3 primos \n4 cálculoJuros \n5 - Sair");
-        int opt = sc.nextInt();
+                    break;
+                case 3:
+                    System.out.println("Digite o número impar: ");
+                    int impar = sc.nextInt();
+                    sc.nextInt();
+                    for (int nImpar = 2; nImpar <= impar; nImpar++) {
+                        if (nImpar % 2 != 0) {
+                            System.out.println(nImpar + "\n ");
+                        }
+                    }
+                    break;
+                case 4:
+                    System.out.println("Calculo de números compostos: ");
+                    System.out.println("Digite o valor do investimento: ");
+                    double investimento = sc.nextDouble();
+                    if (investimento <= 0) {
+                        System.out.println("Não permite número negativo");
+                    } else {
+                        System.out.println("Redigite: ");
+                    }
 
-        switch (opt) {
-            case 1:
-                System.out.println("\t 1 - Pares");
-                System.out.print("Digite o número: ");
-                int pares = sc.nextInt();
-                sc.nextInt();
-                for (int contador=0; pares<=100; contador++){
-                    if(contador %2 == 0){
-                        System.out.print(pares);
-                        break;
+                    System.out.println("Digite o prazo em número de meses: ");
+                    int prazo = sc.nextInt();
+                    if (prazo <= 0) {
+                        System.out.println("Não permite número negativo");
+                    } else {
+                        System.out.println("Redigite: ");
+                    }
 
-            case 2:
-                System.out.println("\t 1 - Ímpares");
-                System.out.print("Digite o número: ");
-                int impares = sc.nextInt();
-                sc.nextInt();
-                for (int contador=0; impares<=100; contador++){
-                    if(contador %2 == 0){
-                        System.out.print(impares);
+                    System.out.println("Digite a taxa de juros mensal: ");
+                    double juros = sc.nextDouble();
+                    if (juros <= 0) {
+                        System.out.println("Não permite número negativo");
+                    } else {
+                        System.out.println("Redigite: ");
+                    }
 
-                break;
+                    for (int i = 0; i < prazo; i++) {
+                        double totalInvest = investimento * (juros/100);
+                        investimento += totalInvest;
+                        System.out.println("O valor total é :" + totalInvest);
+                    }
+                    break;
+                case 0:
+                    System.out.println("Saindo... ");
+                    break;
+                default:
+                    System.out.println("Opção inválida!");
+                    break;
+            }
 
-            case 3:
-                System.out.println("\t 1 - Primos");
-                System.out.print("Digite o número: ");
-                int primos = sc.nextInt();
-                sc.nextInt();
-                for (int primo=1; primos<=primo; primo++){
-                    if(contador %2 == 0){
-                        System.out.print(primos);
-                break;
-
-            case 4:
-                System.out.println("\t 1 - CalculoJuros");
-                System.out.print("Digite o número: ");
-                int calculoJuros = sc.nextInt();
-                sc.nextInt();
-                for (int contador=0; calculoJuros<=100; contador++){
-                    if(contador %2 == 0){
-                        System.out.print(calculoJuros);
-                break;
-
-                        case 5:
-                System.out.println("\t 0 - Sair");
-                System.out.println("\t\nEscolha uma opção do menu: ");
-                int op = sc.nextInt();
-                break;
-
-            default:
-                System.out.println("Opção invalida");
-                break;
-        }
     }
 }
+
+
