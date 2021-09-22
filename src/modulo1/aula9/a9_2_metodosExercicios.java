@@ -5,16 +5,16 @@ public class a9_2_metodosExercicios {
     static Scanner sc = new Scanner(System.in);
 
         public static void main(String[] args) {
-            double n1, n2;
+            double n1 = 0, n2 = 0;
 
             cabecalho();
             imprime_menu();
-            escolha_menu();
-            soma();
-            subtracao();
-            divisao();
-            multiplicacao();
-
+            n1 = ler_numero("Digite o primeiro número: \n");
+            n2 = ler_numero("Digite o segundo número: \n");
+            System.out.printf("\n resultado da soma é " + soma(n1,n2));
+            System.out.printf("\n resultado da subtração é " + subtracao(n1,n2));
+            System.out.printf("\n resultado da divisão é " + divisao(n1,n2));
+            System.out.printf("\n resultado da multiplicação " + multiplicacao(n1,n2));
         }
 
         static void cabecalho() {
@@ -30,7 +30,7 @@ public class a9_2_metodosExercicios {
             System.out.println("\t0Sair");
         }
 
-        static void escolha_menu() {
+        /*static double ler_numero() {
             double op = ler_numero("Siga as orientações do menu : ");
             double n1 = 0, n2 = 0, r = 0;
             if (op > 0) {
@@ -38,7 +38,7 @@ public class a9_2_metodosExercicios {
                 n2 = ler_numero("Digite o segundo número: ");
             }
             System.out.printf("O resultado das operações é %f: ", r);
-        }
+        }*/
 
         static double ler_numero(String mensagem) {
             System.out.print(mensagem);
@@ -47,22 +47,22 @@ public class a9_2_metodosExercicios {
         }
         //operações:
 
-        static void soma(double numero1, double numero2) {
+        static double soma(double numero1, double numero2) {
             double resultado = numero1 + numero2;
             return resultado;
         }
 
-        static void subtracao(double numero1, double numero2) {
+        static double subtracao(double numero1, double numero2) {
             double resultado = numero1 - numero2;
             return resultado;
         }
 
-        static void divisao(double numero1, double numero2) {
+        static double divisao(double numero1, double numero2) {
             double resultado = numero1 / numero2;
             return resultado;
         }
 
-        static void multiplicacao(double numero1, double numero2) {
+        static double multiplicacao(double numero1, double numero2) {
             double resultado = numero1 * numero2;
             return resultado;
         }
