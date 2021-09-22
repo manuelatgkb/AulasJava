@@ -1,6 +1,6 @@
 package modulo1.aula10;
 import java.util.Scanner;
-    public class CadastroDevMetodos {
+    public class a10_1cadastroDevMetodos {
         int opcoes;
         public static void main(String[] args) {
             cabecalho();
