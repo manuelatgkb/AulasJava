@@ -15,6 +15,8 @@ public class a9_2_metodosExercicios {
             System.out.printf("\n resultado da subtração é " + subtracao(n1,n2));
             System.out.printf("\n resultado da divisão é " + divisao(n1,n2));
             System.out.printf("\n resultado da multiplicação " + multiplicacao(n1,n2));
+            System.out.printf("\n Até breve ");
+
         }
 
         static void cabecalho() {
@@ -27,9 +29,8 @@ public class a9_2_metodosExercicios {
             System.out.println("\t2Subtração");
             System.out.println("\t3Divisão");
             System.out.println("\t4Multiplicação");
-            System.out.println("\t0Sair");
+            //System.out.println("\t0Sair");
         }
-
         /*static double ler_numero() {
             double op = ler_numero("Siga as orientações do menu : ");
             double n1 = 0, n2 = 0, r = 0;
@@ -51,20 +52,16 @@ public class a9_2_metodosExercicios {
             double resultado = numero1 + numero2;
             return resultado;
         }
-
         static double subtracao(double numero1, double numero2) {
             double resultado = numero1 - numero2;
             return resultado;
         }
-
         static double divisao(double numero1, double numero2) {
             double resultado = numero1 / numero2;
             return resultado;
         }
-
         static double multiplicacao(double numero1, double numero2) {
             double resultado = numero1 * numero2;
             return resultado;
         }
-
     }
