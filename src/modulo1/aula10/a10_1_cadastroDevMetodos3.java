@@ -1,8 +1,7 @@
 package modulo1.aula10;
 import java.util.Scanner;
 
-public class a10_1cadastroDevMetodos2 {
-    int opcoes;
+public class a10_1_cadastroDevMetodos3 {
     public static void main(String[] args) {
         cabecalho();
         escolha_Menu();
@@ -10,11 +9,9 @@ public class a10_1cadastroDevMetodos2 {
         opcoes();
         lerCasos();
     }
-
     static void cabecalho() {
         System.out.println("============ Cadastro de desenvolvedores ============");
     }
-
     static void escolha_Menu() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Digite sua opção: " +
@@ -23,7 +20,6 @@ public class a10_1cadastroDevMetodos2 {
                 "\n0 - sair ");
         short opcao = sc.nextShort();
     }
-
     private static void ler_dadosDev() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Digite seu nome: ");
@@ -35,8 +31,7 @@ public class a10_1cadastroDevMetodos2 {
         System.out.println("Digite a idade: ");
         int idade = sc.nextInt();
     }
-
-    static short opcoes(short op1, short op2, short op3) {
+    static short opcoes() {
         Scanner sc = new Scanner(System.in);
         boolean invalido = true;
         System.out.println("Digite sua opção: " +
@@ -47,8 +42,7 @@ public class a10_1cadastroDevMetodos2 {
         System.out.printf("Você escolheu %d", opcao);
         return opcao;
     }
-
-    static String case1() {
+    static void case1() {
         boolean invalido = true;
         Scanner sc = new Scanner(System.in);
         String aplicacao = "Front-End";
@@ -69,10 +63,9 @@ public class a10_1cadastroDevMetodos2 {
             System.out.println("\nA descrição da linguagem deve conter no mínimo 3 letras.");
         } else {
             invalido = false;
-        }return aplicacao;
+        }
     }
-
-    static String case2() {
+    static void case2() {
         boolean invalido = true;
         Scanner sc = new Scanner(System.in);
         String aplicacao = "Backend";
@@ -93,10 +86,9 @@ public class a10_1cadastroDevMetodos2 {
             System.out.println("\nA descrição da linguagem deve conter no mínimo 3 letras.");
         } else {
             invalido = false;
-        }return aplicacao;
+        }
     }
-
-    static String case3() {
+    static void case3() {
         boolean invalido = true;
         Scanner sc = new Scanner(System.in);
         String aplicacao = "Mobile";
@@ -117,25 +109,27 @@ public class a10_1cadastroDevMetodos2 {
             System.out.println("\nA descrição da linguagem deve conter no mínimo 3 letras.");
         } else {
             invalido = false;
-        }return aplicacao;
-
-        private static short lerCasos(){
-            short opcoes = opcoes();
-            switch (opcoes) {
-                case 1:
-                    case1();
-                    break;
-                case 2:
-                    case2();
-                    break;
-                case 3:
-                    case3();
-                    break;
-                default:
-                    System.out.println("Opção inválida. Digite novamente!");
-                    break;
-            }
-        }while (invalido);
+        }
+    }
+    private static void lerCasos() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite a opcão desejada:!");
+        short opcao = opcoes();
+        switch (opcao) {
+            case 1:
+                case1();
+                break;
+            case 2:
+                case2();
+                break;
+            case 3:
+                case3();
+                break;
+            default:
+                System.out.println("Opção inválida. Digite novamente!");
+                break;
+        }
     }
 }
 
+}
